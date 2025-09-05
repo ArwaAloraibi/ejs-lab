@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= restaurant.name %></title>
+</head>
+<body bgcolor="lightpink">
+
+<!-- Add partial to home page -->
+<%- include('partials/nav') %>
+
+
+    <h1>Home Page</h1>
+
+  <!-- Using EJS tags, update your HTML to display the restaurant details. Include name, address, and phon -->
+  <p style="color:rgb(118, 84, 45)">Name:    <%= restaurant.name %></p>
+  <p style="color:rgb(118, 84, 45)">Address: <%= restaurant.address %></p>
+  <p style="color:rgb(118, 84, 45)">Phone:   <%= restaurant.phone %></p>
+
+
+  <% if (restaurant.isOpen) { %>
+    <p style="color: green;"><strong>Yes we are open!</strong></p>
+  <% } else { %>
+    <p style="color: red;"><strong>Sorry, we are closed.</strong></p>
+  <% } %>
+
+
+  <!-- Exercise 2: Create a nav bar -->
+
+
+</body>
+</html>
